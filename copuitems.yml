@@ -1,0 +1,14 @@
+---
+- name: My first ansible script
+  hosts: all-hosts
+  tasks:
+  - name: Copy file1-4 to client
+    copy:
+      src: /root/{{ item }}
+      dest: /root
+      mode: 0755
+    with_items:
+      - 'file1'
+      - 'file2'
+      - 'file3'
+      - 'file4'
