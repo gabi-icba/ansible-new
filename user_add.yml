@@ -1,0 +1,10 @@
+---
+- name: My first user add
+  hosts: all-hosts
+  tasks:
+  - name: Create new user
+    user:
+      name: gabi
+      comment: gabi ansible
+      uid: 5555
+      group: wheel
