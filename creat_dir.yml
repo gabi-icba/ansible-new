@@ -1,0 +1,15 @@
+---
+- name: My first ansible script
+  hosts: all-hosts
+  tasks:
+  - name: Create a new folder
+    file:
+      path: /root/new_folder
+      state: directory
+      mode: 0755
+
+  - name: Copy file 1234.txt to all newfolder
+    copy:
+      src: /root/new_folder/1234.txt
+      dest: /root/new_folder
+
